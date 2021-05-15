@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh Lai Suat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        .header{
+            width: 50%;
+            margin: 0 auto;
+        }
+        input[placeholder]{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="container bg-dark text-light">
+    <div class="col">
+        <h1 class="text-center text-danger pt-5">TÍNH LÃI SUẤT VAY</h1>
+        <div class="input-info header">
+            <div class="form-group">
+                <label for="">Số tiền vay: </label>
+                <input type="number" class="form-control" placeholder="Số tiền cần vay (VND)" id="moneyBorrow">
+            </div>
+            <div class="form-group">
+                <label for="">Thời hạn cho vay:</label>
+                <input type="number" class="form-control" placeholder="Thời gian vay (năm)..." id="timeBorrow">
+            </div>
+            <div class="form-group">
+                <label for="">Lãi suất:</label>
+                <input type="number" class="form-control" placeholder="Lãi suất ... %/năm" id="interestRate">
+            </div>
+            <button class="btn btn-success" onclick="OutputMoneyBorrow()">Go</button>
+        </div>
+        <div class="output-info mt-5 pb-5">
+            <h3>Output:</h3>
+            <button class="btn btn-danger mb-2" onclick="DeleteValueInTable()">Clear Table</button>
+            <div class="table border">
+                <table class="table text-warning" id="table-output">
+                    <thead class="text-center">
+                        <tr>
+                            <th class="border">Số tiền còn lại phải trả tháng sau</th>
+                            <th class="border">Tiền gốc phải trả hàng tháng</th>
+                            <th class="border">Lãi hàng tháng</th>
+                            <th class="border">Tổng tiền trả(gốc + lãi)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="border">...</td>
+                            <td class="border">...</td>
+                            <td class="border">...</td>
+                            <td class="border">...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
